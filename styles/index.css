@@ -16,7 +16,46 @@
   font-size: 12px;
   font-family: 'League Spartan', sans-serif;
 }
-body{
-  background-color: gray;
+.furniture{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
+.furniture--about{
+  background-color: var(--White);
+  height: 36%;
+  display: grid;
+  place-items: center;
+}
+.furniture--text{
+  width: 90%;
+}
+.furniture--title{
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: .3em;
+  margin-bottom: 10px;
+}
+.furniture--description{
+  color: var(--Gray);
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+.furniture-image{
+  width: 100%;
+  height: 32%;
+}
+@media screen and (min-width: 1024px) {
+  .furniture{
+    height: 40vh;
+    flex-direction: row;
+  }
+  .furniture--about{
+    width: 40%;
+    height: 100%;
+  }
+  .furniture-image{
+    width: 30%;
+    height: 100%;
+  }
+}

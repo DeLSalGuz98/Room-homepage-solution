@@ -1,9 +1,12 @@
 .carousel{
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .carousel--image{
   width: 100%;
   height: 45%;
+  animation: show .5s ease-in;
 }
 .carousel--info{
   height: 55%;
@@ -14,10 +17,16 @@
 }
 .carousel--text{
   width: 80%;
+  animation: show .5s ease-in;
+}
+@keyframes show{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
 .carousel--title{
   font-size: 2.5em;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 .carousel--description{
   color: var(--Gray);
@@ -32,6 +41,12 @@
   letter-spacing: .5em;
   margin-top: .5em;
 }
+.carousel--link:hover{
+  color: var(--Gray);  
+}
+.carousel--link:hover > img{
+  opacity: 50%;
+}
 .carousel--controls{
   display: flex;
   position: absolute;
@@ -44,7 +59,38 @@
   width: 4em;
   height: 4em;
 }
+.carousel--btn:hover{
+  background-color: var(--Dark-Gray);
+}
 .carousel--btnIcon{
   width: 25%;
   height: 35%;
+}
+@media screen and (min-width: 1024px) {
+  .carousel{
+    height: 60vh;
+    flex-direction: row;
+  }
+  .carousel--image{
+    width: 55%;
+    height: 100%;
+  }
+  .carousel--info{
+    width: 45%;
+    height: 100%;
+    grid-template-rows: 1fr 6em;
+  }
+  .carousel--controls{
+    width: 100%;
+    height: 6em;
+    position: unset;
+    display: flex;
+    justify-content: left;
+  }
+  .carousel--btn{
+    border: none;
+    background-color: var(--Black);
+    width: 6em;
+    height: 6em;
+  }
 }

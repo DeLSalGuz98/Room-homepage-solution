@@ -28,6 +28,7 @@ header{
     list-style: none;
     width: 5em;
     line-height: 2em;
+    position: relative;
   }
   .desktop--item > a{
     text-align: center;
@@ -35,5 +36,13 @@ header{
     display: block;
     text-decoration: none;
     color: var(--White);
+  }
+  .desktop--item:hover::after{
+    content: '';
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    border: solid 1px var(--White);
+    transition: width .5s;
   }
 }
