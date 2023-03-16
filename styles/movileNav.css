@@ -11,6 +11,8 @@
   background-color: var(--Black-opacity);
   position: absolute;
   top: 0;
+  z-index: 5;
+  overflow-y: hidden;
 }
 .movile--nav{
   height: 5em;
